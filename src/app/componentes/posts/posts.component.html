@@ -1,0 +1,22 @@
+<h1>Listado de Posts</h1>
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts; let i = index">
+      <th scope="row"> {{ post.id  }} </th>
+      <td> {{ post.title }} </td>
+      <td>
+          <button (click)="verPost(i)" type="button" class="btn btn-secondary">Mas</button>
+          <!-- <a [routerLink]="['/post',i]" class="btn btn-secondary">Mas</a> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
